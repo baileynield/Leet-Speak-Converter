@@ -16,13 +16,14 @@ leet = {
 }
 
 def convert(text: str) -> str:
-    new_str = []
+    new_str = ""
     for letter in text:
         if letter in leet:
-            new_str.append(leet[letter])
-        if letter not in leet.keys():
-            new_str.append(letter)
+            new_str += str(leet[letter])
+        else:
+            new_str += letter
     return new_str
+
 
 
 text = "testthiswholethingcuzwecan"
